@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>職員専用ページ</title>
+<style>
+body{
+  font-family:sans-serif;
+  text-align:center;
+  margin-top:100px;
+}
+input{
+  padding:10px;
+}
+button{
+  padding:10px 20px;
+}
+</style>
+</head>
+<body>
+
+<h2>職員専用ログイン</h2>
+
+<input type="password" id="pass" placeholder="パスワード">
+<button onclick="login()">入室</button>
+
+<p id="msg" style="color:red;"></p>
+
+<script>
+function login(){
+  const password = "0065"; // 好きなパスワード
+
+  if(document.getElementById("pass").value === password){
+    window.location.href =
+      "https://sites.google.com/view/monndai-com/%E8%81%B7%E5%93%A1%E9%80%A3%E7%B5%A10065";
+  }else{
+    document.getElementById("msg").textContent =
+      "パスワードが違います";
+  }
+}
+</script>
+
+</body>
+</html>
